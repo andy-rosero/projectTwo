@@ -1,0 +1,73 @@
+/* general styling */
+
+body {
+    display:flex;
+    flex-direction:column;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-size:40px;
+    font-style: normal;
+    padding-top: 70px;
+    justify-content: center; 
+    align-items: center;     
+    background-color: #FFC2D1;
+    color: #FB6F92;
+}
+/* container + animation parameters */
+
+.line-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px 0;
+    opacity: 0;
+    white-space: nowrap;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards, scaleFont 6s ease-in-out;
+    transition: all 0.8s ease-out;
+    text-align: left; 
+
+}
+
+/*justifies text according to storytelling need */
+
+.left-justify {
+    text-align: left;
+
+}
+
+.right-justify {
+    text-align: right;
+}
+
+/* animations */ 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleFont {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5); 
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* no blue on link color */
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
